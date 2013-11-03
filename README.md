@@ -1,7 +1,7 @@
 ccm-pulsenet
 ============
 
-Communication Check Module fot PulseNET
+Communication Check Module for PulseNET
 
 ccm-project
 -----------
