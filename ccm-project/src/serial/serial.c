@@ -7,14 +7,9 @@
 
 #include <serial/serial.h>
 
-//------ SERIAL DEVICE ------
-struct termios actual_conf;
-/*
- *
- */
 int serial_conf(int force_init, serial_configuration_t* serial_port) {
-	if(!serial_port -> is_init || force_init){
-
+	if ( !serial_port -> is_init || force_init ) {
+		struct termios actual_conf;
 		char tty_file[30];
 		int br;
 
@@ -93,7 +88,7 @@ int serial_conf(int force_init, serial_configuration_t* serial_port) {
 		printf("done %d \n", serial_port -> file_descriptor);
 
 
-		serial_port -> is_init = true;
+		serial_port -> is_init = 1;
 	}
 	return(EXIT_SUCCESS);
 }
